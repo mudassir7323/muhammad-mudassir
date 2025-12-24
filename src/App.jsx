@@ -1,17 +1,22 @@
 // src/App.jsx
-import React from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Service from "./pages/Service";
 
 function App() {
   return (
-    <div className="min-h-screen">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Main content */}
-      <Home />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-950">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/:serviceName" element={<Service />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
