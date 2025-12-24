@@ -3,29 +3,40 @@ import myImage from '../assets/myImage.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Gradient Blob */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center bg-gray-950 pt-20"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
+        
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left mt-10 md:mt-0">
-          <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-secondary uppercase bg-secondary/10 rounded-full">
+          <span className="inline-block px-4 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
             Available for Hire
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          </span>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Hi, I'm <br />
-            <span className="text-gradient">Muhammad Mudassir</span>
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Muhammad Mudassir
+            </span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I am a passionate Web Developer & AI enthusiast. My vision is to build futuristic software solutions that impact people's lives positively.
+
+          <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-lg md:mx-0 leading-relaxed">
+            Passionate Web Developer & AI enthusiast. I build modern, scalable, and intelligent software solutions that make a positive impact.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#contact" className="btn-primary text-center">
+            <a
+              href="#contact"
+              className="px-8 py-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors duration-300 text-center"
+            >
               Hire Me
             </a>
-            <a href="#projects" className="px-6 py-3 rounded-full border border-gray-700 text-white font-semibold hover:bg-white/5 transition-all text-center">
+            <a
+              href="#projects"
+              className="px-8 py-3 rounded-full border border-gray-700 text-white font-semibold hover:bg-white/10 transition-colors duration-300 text-center"
+            >
               View Projects
             </a>
           </div>
@@ -33,13 +44,13 @@ const Hero = () => {
 
         {/* Image Content */}
         <div className="md:w-1/2 flex justify-center relative">
-          <div className="relative w-64 h-64 md:w-96 md:h-96">
-            {/* Glow effect behind image */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-full blur-2xl opacity-50 animate-pulse"></div>
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            {/* Subtle Glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 opacity-40 blur-3xl"></div>
             <img
               src={myImage}
               alt="Muhammad Mudassir"
-              className="relative w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-2xl z-10"
+              className="relative w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-xl z-10"
             />
           </div>
         </div>
