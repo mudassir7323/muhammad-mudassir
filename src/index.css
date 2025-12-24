@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* =========================
+   GLOBAL THEME VARIABLES
+   ========================= */
+:root {
+  /* Deep Space Palette */
+  --bg-dark: #030712;       /* Very dark blue/black */
+  --bg-card: #111827;       /* Slightly lighter for cards */
+  --primary: #6366f1;       /* Indigo */
+  --secondary: #0ea5e9;     /* Sky Blue */
+  --accent: #d946ef;        /* Fuchsia */
+  
+  --text-main: #f9fafb;     /* Near white */
+  --text-muted: #9ca3af;    /* Gray */
+  
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(17, 24, 39, 0.7);
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* =========================
+   UTILITIES
+   ========================= */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
