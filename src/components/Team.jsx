@@ -1,12 +1,13 @@
 import React from 'react';
+import { FaRegUser } from "react-icons/fa6";
 import member1 from '../assets/member1.jpeg';
-import member2 from '../assets/member2.jpeg';
+import member2 from '../assets/myImage.png';
 import member3 from '../assets/member3.jpeg';
 
 const team = [
-  { name: "Ali Khan", role: "Web Developer", image: member1 },
-  { name: "Sara Ahmed", role: "ML Engineer", image: member2 },
-  { name: "Usman Riaz", role: "UI/UX Designer", image: member3 },
+  { name: "Muhammad Osama Jan", role: "Sotware Engineer", image: null },
+  { name: "Muhammad Mudassir", role: "ML Engineer", image: member2 },
+  { name: "Abdullah Tariq", role: "UI/UX Designer", image: null },
 ];
 
 const Team = () => {
@@ -14,7 +15,7 @@ const Team = () => {
     <section id="team" className="section-padding">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Our <span className="text-gradient">Team</span>
+          My <span className="text-gradient">Team</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
